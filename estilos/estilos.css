@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+
+:root{
+    --letra: "DM Sans", sans-serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--letra);
+}
+
+main{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "createPost socialMedia socialMedia scheduleSocial"
+                          "createPost socialMedia socialMedia scheduleSocial"
+                          "createPost multipleAccounts postingSchedule scheduleSocial"
+                          "writeYourContent multipleAccounts postingSchedule scheduleSocial"
+                          "writeYourContent audience growFollowers growFollowers"
+                          "writeYourContent audience growFollowers growFollowers";
+    margin: 0 auto;
+    gap: 0.938rem;
+    min-height: 100vh;
+    padding: 0.625rem;
+}
+
+main .border{
+    border-radius: 20px;
+}
+/* createPost */
+main .createPost{
+    grid-area: createPost;
+    background-color: hsl(31, 66%, 93%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.875rem;
+}
+
+main .createPost h3{
+    padding-left: 0.938rem;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.125rem;
+    font-size: 1.875rem;
+    width: 11.875rem;
+}
+
+main .createPost img{
+    width: 80%;
+}
+
+main .createPost span{
+    color: hsl(256, 67%, 59%);
+    font-style: italic;
+    
+}
+/* socialMedia */
+main .socialMedia{
+    grid-area: socialMedia;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.875rem;
+}
+
+main .socialMedia p{
+    font-size: 2rem;
+    color: hsl(31, 66%, 93%);
+    font-size: 2rem;
+}
+
+main .socialMedia p.social span{
+    color: hsl(39, 100%, 71%);
+}
+
+main .socialMedia p.faster span{
+    font-style: italic;
+}
+main .socialMedia img{
+    width: 30%;
+    margin: 0.938rem 0 0.313rem 0;
+}
+
+main .socialMedia .star{
+    color: hsl(31, 66%, 93%);
+    font-size: 0.813rem;
+}
+
+/* scheduleSocial */
+main .scheduleSocial{
+    grid-area: scheduleSocial;
+    background-color: hsl(254, 88%, 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.875rem;
+    overflow-x: hidden;
+}
+
+main .scheduleSocial h3{
+    padding: 0.625rem 0 0 2.5rem;
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+    letter-spacing: -0.063rem;
+    line-height: 1.25rem;
+    font-size: 1.3rem;
+    width: 12.5rem;
+}
+
+main .scheduleSocial img{
+    width: 18.75rem;
+    margin-left: 2.625rem;
+}
+
+main .scheduleSocial p{
+    font-size: 1rem;
+    width: 12.5rem;
+    padding: 0.938rem 0 1.25rem 2.5rem;
+    letter-spacing: -0.063rem;
+    line-height: 0.938rem;
+    font-weight: 400;
+}
+
+/* multipleAccounts */
+main .multipleAccounts{
+    grid-area: multipleAccounts;
+    background-color: hsl(0, 100%, 99%);
+    overflow-x: hidden;
+}
+
+main .multipleAccounts img{
+    width: 18rem;
+    border-radius: 20px;
+    margin: 1.25rem 0 1.25rem 1.25rem;
+    box-shadow: 0px 0px 20px rgb(203, 203, 203);
+}
+
+main .multipleAccounts p{
+    font-size: 1.7rem;
+    padding: 0.938rem .5rem 1.25rem 2.5rem;
+    letter-spacing: -0.063rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+/* postingSchedule */
+main .postingSchedule{
+    grid-area: postingSchedule;
+    background-color: hsl(39, 100%, 71%);
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+main .postingSchedule p{
+    font-size: 1.7rem;
+    padding: 1.9rem .5rem 1.25rem 1.5rem;
+    letter-spacing: -0.063rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+main .postingSchedule img{
+    width: 80%;
+    position: absolute;
+    bottom: -60px;
+}
+
+/* writeYourContent */
+main .writeYourContent{
+    grid-area: writeYourContent;
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .writeYourContent p{
+    width: 10.625rem;
+    font-size: 1.9rem;
+    letter-spacing: -0.12rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+}
+
+main .writeYourContent img{
+    width: 90%;
+    padding: 0 0 1.25rem 1.25rem;
+}
+
+/* audience */
+main .audience{
+    grid-area: audience;
+    background-color: hsl(0, 100%, 99%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .audience span{
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+main .audience img{
+    width: 80%;
+}
+
+/* growFollowers */
+main .growFollowers{
+    grid-area: growFollowers;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    align-items: center;
+}
+
+main .growFollowers p{
+    font-size: 1.9rem;
+    letter-spacing: -0.12rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+    color: hsl(0, 100%, 99%);
+}
+
+main .growFollowers img{
+    width: 50%;
+    padding: 20px 0 20px 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "socialMedia"
+            "multipleAccounts"
+            "postingSchedule"
+            "scheduleSocial"
+            "growFollowers"
+            "audience"
+            "createPost"
+            "writeYourContent";
+        gap: 1.875rem;
+    }
+
+    main .socialMedia{
+        height: 12.5rem;
+    }
+
+    main .postingSchedule{
+        height: 15.625rem;
+    }
+
+    main .scheduleSocial h3{
+        width: 80%;
+        margin-left: 0.625rem;
+    }
+
+    main .scheduleSocial img{
+        padding-right: 1.25rem;
+    }
+
+    main .scheduleSocial p{
+        width: 16.25rem;
+        margin-left: 1.563rem;
+        text-align: center;
+        word-spacing: 2px;
+    }
+
+    main .growFollowers{
+        flex-direction: column;
+    }
+
+    main .growFollowers img{
+        width: 70%;
+    }
+
+    main .growFollowers p {
+        width: 60%;
+        text-align: center;
+        padding-bottom: 0.938rem;
+    }
+
+    main .audience{
+        align-items: start;
+        padding-left: 1.25rem;
+    }
+
+    main .audience img{
+        width: 55%;
+        padding: 1.25rem 0 1.25rem 0.625rem;
+    }
+
+    main .createPost h3{
+        width: 100%;
+        padding: 1.25rem 0 0.625rem 1.25rem;
+    }
+
+    main .createPost img{
+        width: 50%;
+    }
+
+    main .writeYourContent p{
+        width: 80%;
+        padding: 1.25rem 0 1.25rem 0;
+    }
+}
